@@ -1,0 +1,41 @@
+:root {
+    font-size: 16px;
+    --bg-color: #EDF2F4;
+    --rich-black: #050517;
+    --pantone-red: #EF233C;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h1 {
+    margin-right: auto;
+    margin-left: 2rem;
+    font-size: 3rem;
+}
+
+header > ul {
+    display: flex;
+    gap: 2rem;
+    margin-right: 2rem;
+}
+
+header > ul > li {
+    display: inline;    
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+section > img {
+    width: 100dvw;
+}
