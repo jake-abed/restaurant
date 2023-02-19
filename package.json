@@ -1,0 +1,24 @@
+{
+  "name": "restaurant",
+  "version": "1.0.0",
+  "description": "a basic restaurant website to prove competency with webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jake-abed/restaurant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jake-abed/restaurant/issues"
+  },
+  "homepage": "https://github.com/jake-abed/restaurant#readme",
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
