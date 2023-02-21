@@ -13,7 +13,16 @@ function buildHeader(h1Copy) {
 
         A.setAttribute('href', href);
         A.innerText = name;
+        LI.appendChild(A);
+        return LI;
     }
+    H1.innerText = h1Copy;
+    HEADER.appendChild(H1);
+    UL.appendChild(createNavListItem('Home', '#'));
+    UL.appendChild(createNavListItem('Menu', '#'));
+    UL.appendChild(createNavListItem('About Us', '#'));
+    HEADER.appendChild(UL);
+    return contentDiv.appendChild(HEADER);
 }
 
 function checkContent() {
@@ -21,5 +30,6 @@ function checkContent() {
 };
 
 export {
-    checkContent
+    checkContent,
+    buildHeader
 }

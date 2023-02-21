@@ -5,7 +5,7 @@ import * as buildDOM from './buildDOM';
 
 buildDOM.checkContent();
 
-buildDOM.appendH1('Hi Mom!', buildDOM.contentDiv);
+buildDOM.buildHeader('FAUX TAUX AUPS');
 
 /*
 
