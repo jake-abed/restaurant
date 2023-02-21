@@ -5,11 +5,13 @@
     --pantone-red: #EF233C;
     padding: 0;
     margin: 0;
+    font-family: Helvetica, sans-serif;
 }
 
 body {
     padding: 0;
     margin: 0;
+    background-color: var(--bg-color);
 }
 
 header {
@@ -36,6 +38,43 @@ header > ul > li {
     font-size: 1.5rem;
 }
 
+header > ul > li > a {
+    color: var(--rich-black);
+    text-decoration: none;
+}
+
+header > ul > li > a:hover {
+    color: var(--pantone-red);
+}
+
+.hero {
+    display: grid;
+    grid-template: 1fr / 1fr;
+    align-items: center;
+}
+
+.hero-copy {
+    grid-area: 1 / 1;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    background-color: #05051766;
+    padding: 2rem 0 2rem 0;
+    color: var(--bg-color);
+    cursor: default;
+}
+
 section > img {
     width: 100dvw;
+    height: 80dvh;
+    object-fit: none;
+    grid-area: 1 / 1;
+}
+
+footer > p {
+    text-align: center;
+}
+
+footer > p:hover {
+    text-decoration: underline var(--pantone-red);
 }
