@@ -22,7 +22,25 @@ function buildHeader(h1Copy) {
     UL.appendChild(createNavListItem('Menu', '#'));
     UL.appendChild(createNavListItem('About Us', '#'));
     HEADER.appendChild(UL);
-    return contentDiv.appendChild(HEADER);
+    contentDiv.appendChild(HEADER);
+    return console.log(`Header with H1 of ${h1Copy} Built`);
+}
+
+function buildHero(imageLink, altText, copy) {
+    const SECTION = document.createElement('section'),
+        IMAGE = document.createElement('img'),
+        HERO_COPY = document.createElement('div');
+    
+    SECTION.classList.add('hero');
+    IMAGE.setAttribute('src', imageLink);
+    IMAGE.setAttribute('alt', altText);
+    HERO_COPY.classList.add('hero-copy');
+    HERO_COPY.innerText = copy;
+
+    SECTION.appendChild(IMAGE);
+    SECTION.appendChild(HERO_COPY);
+    contentDiv.appendChild(SECTION);
+    return console.log(`Hero with copy ${copy} created!`)
 }
 
 function checkContent() {
@@ -31,5 +49,6 @@ function checkContent() {
 
 export {
     checkContent,
-    buildHeader
+    buildHeader,
+    buildHero
 }

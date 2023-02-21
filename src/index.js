@@ -1,11 +1,14 @@
 'use strict';
 
 import './style.css';
+import Hero from './restaurant_hero.jpeg';
 import * as buildDOM from './buildDOM';
 
 buildDOM.checkContent();
 
 buildDOM.buildHeader('FAUX TAUX AUPS');
+
+buildDOM.buildHero(Hero, 'Text Alt Text', 'Fake Food For Fake Folks');
 
 /*
 
