@@ -5,6 +5,8 @@ import Hero from './restaurant_hero.jpeg';
 import * as buildShell from './buildDOM';
 import { buildHero } from './buildHome';
 
+const footerCopy = 'Faux Taux Aups © created by Jake Abed circa 2023';
+
 buildShell.checkContent();
 
 buildShell.buildHeader('FAUX TAUX AUPS');
@@ -13,7 +15,7 @@ buildShell
     .contentDiv
     .appendChild(buildHero(Hero, 'Text Alt Text', 'Fake Food For Fake Folks'));
 
-
+buildShell.buildFooter(footerCopy);
 
 /*
 

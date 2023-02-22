@@ -26,6 +26,16 @@ function buildHeader(h1Copy) {
     return console.log(`Header with H1 of ${h1Copy} Built`);
 }
 
+function buildFooter(copy) {
+    const FOOTER = document.createElement('footer'),
+        P = document.createElement('p');
+    
+    P.innerText = copy;
+    FOOTER.appendChild(P);
+    contentDiv.appendChild(FOOTER);
+    return console.log(`Footer with copy of ${copy} created.`);
+}
+
 function checkContent() {
     console.log(contentDiv)
 };
@@ -33,5 +43,6 @@ function checkContent() {
 export {
     checkContent,
     contentDiv,
-    buildHeader
+    buildHeader,
+    buildFooter
 }
