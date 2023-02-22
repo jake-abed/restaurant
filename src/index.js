@@ -2,13 +2,18 @@
 
 import './style.css';
 import Hero from './restaurant_hero.jpeg';
-import * as buildDOM from './buildDOM';
+import * as buildShell from './buildDOM';
+import { buildHero } from './buildHome';
 
-buildDOM.checkContent();
+buildShell.checkContent();
 
-buildDOM.buildHeader('FAUX TAUX AUPS');
+buildShell.buildHeader('FAUX TAUX AUPS');
 
-buildDOM.buildHero(Hero, 'Text Alt Text', 'Fake Food For Fake Folks');
+buildShell
+    .contentDiv
+    .appendChild(buildHero(Hero, 'Text Alt Text', 'Fake Food For Fake Folks'));
+
+
 
 /*
 
