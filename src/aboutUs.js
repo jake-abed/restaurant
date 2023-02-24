@@ -23,6 +23,7 @@ function buildAboutUs(copy, imageLink, imageAlt) {
     REVIEW_DIV.appendChild(REVIEWER_NAME);
     SECTION.appendChild(ABOUT_DIV);
     SECTION.appendChild(REVIEW_DIV);
+    SECTION.classList.add('about');
     console.log(`About us page with review from ${RANDOM_REVIEW.name} built.`);
     return SECTION;
 }

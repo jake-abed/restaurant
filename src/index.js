@@ -2,7 +2,7 @@
 
 import './style.css';
 import Hero from './restaurant_hero.jpeg';
-import * as buildShell from './buildDOM';
+import * as buildDOM from './buildDOM';
 import { buildHero } from './buildHome';
 import { buildAboutUs } from './aboutUs';
 
@@ -13,17 +13,38 @@ const footerCopy = 'Faux Taux Aups © created by Jake Abed circa 2023',
                   'an idiot and clearly had a bad concept for a restaurant ' +
                   'why did I take this gig. I wanted to be an astronaut...';
 
-buildShell.checkContent();
+buildDOM.checkContent();
 
-buildShell.buildHeader('FAUX TAUX AUPS');
+buildDOM.buildHeader('FAUX TAUX AUPS');
 
-buildShell
+buildDOM
     .contentDiv
     .appendChild(buildHero(Hero, 'Text Alt Text', 'Fake Food For Fake Folks'));
 
-buildShell.contentDiv.appendChild(buildAboutUs(aboutUsCopy));
+buildDOM.buildFooter(footerCopy);
 
-buildShell.buildFooter(footerCopy);
+function loadHome() {
+    if (document.querySelector('section.hero')) return console.log('Already on Home!');
+    buildDOM.deleteSection();
+    buildDOM
+        .contentDiv
+        .appendChild(buildHero(Hero,
+            'The hands of a chef assembling a mushroom-centric dish on a log.',
+            'Fake Food For Fake Folks'));
+    return console.log('Home loaded!');
+}
+
+function loadAboutUs() {
+    if (document.querySelector('section.about')) return console.log('Already on About Us!');
+    buildDOM.deleteSection();
+    buildDOM
+        .contentDiv
+        .appendChild(buildAboutUs(aboutUsCopy));
+    return console.log('About Us loaded!');
+}
+
+document.querySelector('#home').addEventListener('click', loadHome);
+document.querySelector('#about').addEventListener('click', loadAboutUs);
 
 /*
 
