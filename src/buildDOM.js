@@ -1,6 +1,7 @@
 "use strict";
 
 const contentDiv = document.querySelector("#content");
+const bodyDiv = document.querySelector('.body');
 
 function buildHeader(h1Copy) {
   const HEADER = document.createElement("header"),
@@ -27,9 +28,16 @@ function buildHeader(h1Copy) {
   return console.log(`Header with H1 of ${h1Copy} Built`);
 }
 
+function buildBody() {
+  const BODY = document.createElement('div');
+  BODY.classList.add('body');
+  contentDiv.appendChild(BODY);
+  return console.log('Body DIV created in DOM');
+}
+
 function buildFooter(copy) {
-  const FOOTER = document.createElement("footer"),
-    P = document.createElement("p");
+  const FOOTER = document.createElement('footer'),
+    P = document.createElement('p');
 
   P.innerText = copy;
   FOOTER.appendChild(P);
@@ -45,4 +53,4 @@ function checkContent() {
   console.log(contentDiv);
 }
 
-export { checkContent, contentDiv, buildHeader, buildFooter, deleteSection };
+export { checkContent, contentDiv, bodyDiv, buildBody, buildHeader, buildFooter, deleteSection };

@@ -64,6 +64,19 @@ header > ul > li > a:hover {
     cursor: default;
 }
 
+.about {
+    width: min(90vw, 800px);
+    margin: 0 auto;
+}
+
+.about > div > h2 {
+    font-size: 2rem;
+}
+
+.about > div > p {
+    font-size: 1.25rem;
+}
+
 section > img {
     width: 100dvw;
     height: 80dvh;
@@ -77,4 +90,25 @@ footer > p {
 
 footer > p:hover {
     text-decoration: underline var(--pantone-red);
+}
+
+@media screen and (max-width: 550px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    h1 {
+        font-size: 2rem;
+        margin: 2rem auto 0.25rem auto;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+    header > ul > li {
+        font-size: 1.25rem;
+    }
 }

@@ -17,8 +17,11 @@ buildDOM.checkContent();
 
 buildDOM.buildHeader('FAUX TAUX AUPS');
 
-buildDOM
-    .contentDiv
+buildDOM.buildBody();
+
+const bodyDiv = document.querySelector('.body');
+
+bodyDiv
     .appendChild(buildHero(Hero, 'Text Alt Text', 'Fake Food For Fake Folks'));
 
 buildDOM.buildFooter(footerCopy);
@@ -26,8 +29,7 @@ buildDOM.buildFooter(footerCopy);
 function loadHome() {
     if (document.querySelector('section.hero')) return console.log('Already on Home!');
     buildDOM.deleteSection();
-    buildDOM
-        .contentDiv
+    bodyDiv
         .appendChild(buildHero(Hero,
             'The hands of a chef assembling a mushroom-centric dish on a log.',
             'Fake Food For Fake Folks'));
@@ -37,10 +39,9 @@ function loadHome() {
 function loadAboutUs() {
     if (document.querySelector('section.about')) return console.log('Already on About Us!');
     buildDOM.deleteSection();
-    buildDOM
-        .contentDiv
+    bodyDiv
         .appendChild(buildAboutUs(aboutUsCopy));
-    return console.log('About Us loaded!');
+    return console.log('About Us loaded, loser!');
 }
 
 document.querySelector('#home').addEventListener('click', loadHome);
