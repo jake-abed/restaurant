@@ -65,8 +65,11 @@ header > ul > li > a:hover {
 }
 
 .about {
-    width: min(90vw, 800px);
+    width: min(80vw, 800px);
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
 }
 
 .about > div > h2 {
@@ -75,6 +78,11 @@ header > ul > li > a:hover {
 
 .about > div > p {
     font-size: 1.25rem;
+}
+
+section {
+    width: 100dvw;
+    height: 80dvh;
 }
 
 section > img {
