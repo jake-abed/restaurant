@@ -1,12 +1,15 @@
 'use strict';
 
 import './style.css';
-import Hero from './images/restaurant_hero';
-import StankPancakes from './images/StankPancakes';
-import DeconstructedBurger from './images/DeconstructedBurger';
+import Hero from './images/restaurant_hero.jpeg';
+import StankPancakes from './images/stank-pancakes.jpg';
+import DeconstructedBurger from './images/deconstructed-burger.jpg';
+import IceCreamBalls from './images/ice-cream-balls.jpg'
 import * as buildDOM from './buildDOM';
 import { buildHero } from './buildHome';
+import { buildMenu } from './buildMenu';
 import { buildAboutUs } from './buildAboutUs';
+import { menuItems } from './menuItemData';
 
 const footerCopy = 'Faux Taux Aups © created by Jake Abed circa 2023',
     aboutUsCopy = 'All of our food is fake. It is meant for you to take ' +
@@ -38,6 +41,14 @@ function loadHome() {
     return console.log('Home loaded!');
 }
 
+function loadMenu() {
+    if (document.querySelector('section.menu')) return console.log('Already on Menu!');
+    buildDOM.deleteSection();
+    bodyDiv
+        .appendChild(buildMenu(menuItems));
+    return console.log('Menu loaded, dummy!');
+}
+
 function loadAboutUs() {
     if (document.querySelector('section.about')) return console.log('Already on About Us!');
     buildDOM.deleteSection();
@@ -47,6 +58,7 @@ function loadAboutUs() {
 }
 
 document.querySelector('#home').addEventListener('click', loadHome);
+document.querySelector('#menu').addEventListener('click', loadMenu);
 document.querySelector('#about').addEventListener('click', loadAboutUs);
 
 /*
