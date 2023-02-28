@@ -1,3 +1,5 @@
+'use strict';
+
 function buildHero(imageLink, altText, copy) {
     const SECTION = document.createElement('section'),
         IMAGE = document.createElement('img'),

@@ -1,10 +1,12 @@
 'use strict';
 
 import './style.css';
-import Hero from './restaurant_hero.jpeg';
+import Hero from './images/restaurant_hero';
+import StankPancakes from './images/StankPancakes';
+import DeconstructedBurger from './images/DeconstructedBurger';
 import * as buildDOM from './buildDOM';
 import { buildHero } from './buildHome';
-import { buildAboutUs } from './aboutUs';
+import { buildAboutUs } from './buildAboutUs';
 
 const footerCopy = 'Faux Taux Aups © created by Jake Abed circa 2023',
     aboutUsCopy = 'All of our food is fake. It is meant for you to take ' +

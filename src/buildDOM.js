@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 const contentDiv = document.querySelector("#content");
 const bodyDiv = document.querySelector('.body');
