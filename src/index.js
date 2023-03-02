@@ -9,7 +9,7 @@ import * as buildDOM from './buildDOM';
 import { buildHero } from './buildHome';
 import { buildMenu } from './buildMenu';
 import { buildAboutUs } from './buildAboutUs';
-import { menuItems } from './menuItemData';
+import { menuItems } from './data/menuItemData';
 
 const footerCopy = 'Faux Taux Aups © created by Jake Abed circa 2023',
     aboutUsCopy = 'All of our food is fake. It is meant for you to take ' +

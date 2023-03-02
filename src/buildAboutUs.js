@@ -1,6 +1,6 @@
 'use strict';
 
-import { randomReviews } from "./randomReviews";
+import { randomReviews } from "./data/randomReviews";
 import { randomIndexUpTo } from "./utils";
 
 function buildAboutUs(copy, imageLink, imageAlt) {
